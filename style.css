@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700');
+
+:root{
+  --text: #000;
+  --line: #000;
+  --line-active: #000;
+}
+
+body{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #F6F6FF;
+  font-family: "Poppins", sans-serif;
+}
+
+a{
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  color: #000;
+  font-size: 20px;
+  margin: 0 var(--spacing, 0px);
+  transition: margin 0.25s;
+}
+
+a:hover{
+  --spacing: 4px;
+  --stroke: #000;
+  --stroke-delay: 0.1s;
+  --offset: 180px;
+}
+
+a svg{
+  width: 120px;
+  height: 40px;
+  position: absolute;
+  left: 50%;
+  bottom: 0px;
+  fill: none;
+  stroke: var(--stroke, var(--line));
+  stroke-linecap: round;
+  stroke-width: 2px;
+  stroke-dasharray: var(--offset, 69px) 278px;
+  stroke-dashoffset: 361px;
+  transition: stroke 0.25s ease var(--stroke-delay, 0s), stroke-dasharray 0.35s;
+  transform: translate(-50%, 7px) translateZ(0);
+}
